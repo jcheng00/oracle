@@ -1,0 +1,9 @@
+entrez_id,symbol,methods,best_score,score,max_score,best_score_rev,best_score_count,confidence,mist_ppi,mist_genetic,geneid,species_id,species_specific_geneid,species_specific_geneid_type,count
+39975,Adgf-B,"['Compara', 'eggNOG', 'OrthoDB', 'TreeFam', 'Domainoid', 'Hieranoid', 'Inparanoid', 'OMA', 'OrthoFinder', 'OrthoInspector', 'orthoMCL', 'Panther', 'Phylome', 'RoundUp', 'SonicParanoid']",Yes,15,18,Yes,2,high,-,-,39975,7227,FBgn0036751,FlyBase,15
+39976,Adgf-A,"['Compara', 'eggNOG', 'Isobase', 'OrthoDB', 'TreeFam', 'Domainoid', 'Hieranoid', 'Inparanoid', 'OMA', 'OrthoFinder', 'OrthoInspector', 'orthoMCL', 'Panther', 'Phylome', 'SonicParanoid']",Yes,15,18,Yes,2,high,-,-,39976,7227,FBgn0036752,FlyBase,15
+36627,Adgf-E,"['Compara', 'eggNOG', 'OrthoDB', 'TreeFam', 'Domainoid', 'Hieranoid', 'Inparanoid', 'OMA', 'OrthoFinder', 'OrthoInspector', 'orthoMCL', 'Panther', 'Phylome', 'SonicParanoid']",No,14,18,Yes,1,moderate,-,-,36627,7227,FBgn0033952,FlyBase,14
+41679,Adgf-D,"['Compara', 'eggNOG', 'Homologene', 'OrthoDB', 'TreeFam', 'Domainoid', 'OMA', 'OrthoFinder', 'orthoMCL', 'Panther', 'Phylome', 'RoundUp']",No,12,18,Yes,1,moderate,-,-,41679,7227,FBgn0038172,FlyBase,12
+41680,Adgf-C,"['Compara', 'eggNOG', 'Homologene', 'OrthoDB', 'TreeFam', 'Domainoid', 'OMA', 'OrthoFinder', 'orthoMCL', 'Panther', 'Phylome']",No,11,18,Yes,1,moderate,-,-,41680,7227,FBgn0038173,FlyBase,11
+64879,Adgf-A2,"['Compara', 'eggNOG', 'OrthoDB', 'TreeFam', 'OMA', 'OrthoFinder', 'Panther', 'Phylome']",No,8,18,Yes,1,moderate,-,-,64879,7227,FBgn0043025,FlyBase,8
+41092,Ada,"['eggNOG', 'Phylome']",No,2,18,No,0,low,-,-,41092,7227,FBgn0037661,FlyBase,2
+32352,AMPdeam,['eggNOG'],No,1,18,No,0,low,-,-,32352,7227,FBgn0052626,FlyBase,1

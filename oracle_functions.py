@@ -18,7 +18,7 @@ def iterate_files_in_folder(folder_path):
 #   API CALLS   #
 #################
 
-def pull_diopt_orthologs(input_species_id, output_species_id, entrez_id):
+def pull_diopt_orthologs(input_species_id, output_species_id, entrez_id, output_folder = "ortholog_output"):
     '''
     Fetches orthologous protein data from the DIOPT API for a given Entrez gene ID and species pair, 
     processes the data into a pandas DataFrame, and saves it as a CSV file.
@@ -63,12 +63,9 @@ def pull_diopt_orthologs(input_species_id, output_species_id, entrez_id):
         cols = ['entrez_id', 'symbol'] + [col for col in df.columns if col not in ['entrez_id', 'symbol']]
         df = df[cols]
 
-        folder = "ortholog_output"
-        os.makedirs(folder, exist_ok=True)
-
         file_name = f"{gene_name}_fly_orthologs.csv"
 
-        df.to_csv(file_name, index=False)
+        df.to_csv(f"{output_folder}/{file_name}", index=False)
 
         print("Found DIOPT orthologs")
 
@@ -80,7 +77,7 @@ def pull_diopt_orthologs(input_species_id, output_species_id, entrez_id):
 #   ORTHOLOG AND ALIGNMENT  #
 #############################
         
-def filter_diopt_results(df, file_name):
+def filter_diopt_results(df, file_name, output_folder = "ortholog_output"):
     '''
     Filters a DataFrame to include rows that are likely the best ortholog for a given protein/gene
 
@@ -102,5 +99,5 @@ def filter_diopt_results(df, file_name):
         if row["best_score"] == "Yes" or row["best_score_rev"] == "Yes" or row["confidence"] in ["high", "moderate"]:
             output_df = pd.concat([output_df, pd.DataFrame([row])], ignore_index=True)
     output_file = f"filtered_{file_name}"
-    output_df.to_csv(output_file, index = False)
+    output_df.to_csv(f"{output_folder}/{output_file}", index = False)
     return output_df, output_file
