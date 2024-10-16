@@ -8,14 +8,30 @@
 
 module load clustalw
 
+# Define the output folder
+OUTPUT_FOLDER="ortholog_output"
+
+# Check if the output folder exists, if not, create it
+if [ ! -d "$OUTPUT_FOLDER" ]; then
+  mkdir -p "$OUTPUT_FOLDER"
+fi
+
 # Get the input file from the command-line arguments
-while getopts ":INFILE:" opt; do
+while getopts ":i:" opt; do
   case $opt in
-    INFILE) infile="$OPTARG"
+    i) infile="$OPTARG"
     ;;
     \?) echo "Invalid option -$OPTARG" >&2
+        exit 1
     ;;
   esac
 done
 
-clustalw -INFILE=$infile -ALIGN
+# Check if infile is set
+if [ -z "$infile" ]; then
+  echo "Usage: $0 -i <input_file>"
+  exit 1
+fi
+
+# Run clustalw with the specified input and output file
+clustalw -INFILE="$infile" -ALIGN -OUTFILE="$OUTPUT_FOLDER/alignment.aln"
