@@ -20,7 +20,7 @@ url = f"https://www.flyrnai.org/tools/diopt/web/diopt_api/v8/get_orthologs_from_
 req = requests.get(url, verify=False)
 data = req.json()
 gene_name = data["search_details"]["gene_details"][0]["symbol"]
-df = pd.DataFrame(data["results"][entrez_id])
+df = pd.DataFrame(data["results"][str(entrez_id)])
 
 # Transpose the DataFrame to switch rows and columns
 df = df.transpose()
