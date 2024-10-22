@@ -1,0 +1,2 @@
+entrez_id,symbol,methods,best_score,score,max_score,best_score_rev,best_score_count,confidence,mist_ppi,mist_genetic,geneid,species_id,species_specific_geneid,species_specific_geneid_type,count
+3772382,Plp,"['eggNOG', 'Domainoid', 'Inparanoid', 'OrthoFinder', 'OrthoInspector', 'Panther', 'RoundUp']",Yes,7,18,Yes,2,high,-,-,3772382,7227,FBgn0086690,FlyBase,7
