@@ -1,0 +1,2 @@
+entrez_id,symbol,methods,best_score,score,max_score,best_score_rev,best_score_count,confidence,mist_ppi,mist_genetic,geneid,species_id,species_specific_geneid,species_specific_geneid_type,count
+32876,Pvf1,"['Compara', 'eggNOG', 'TreeFam', 'Domainoid', 'OrthoInspector', 'Panther', 'Phylome', 'SonicParanoid']",Yes,8,18,No,1,moderate,-,-,32876,7227,FBgn0030964,FlyBase,8
