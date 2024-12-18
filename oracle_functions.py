@@ -4,6 +4,7 @@ import pandas as pd
 import os
 from Bio import Phylo
 import matplotlib.pyplot as plt
+import re
 
 #########################
 #   GENERAL FUNCTIONS   #

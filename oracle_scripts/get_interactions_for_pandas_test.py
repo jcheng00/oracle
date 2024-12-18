@@ -8,6 +8,8 @@ Fetch interactions for use in a pandas dataframe
 import requests
 import json
 import pandas as pd
+import sys
+sys.path.append("../core")
 from core import config as cfg
 import argparse
 
@@ -83,7 +85,7 @@ def main():
     dataset = dataset[columns]
 
     # Pretty print out the results
-    dataset.to_csv(f"{output_folder}/PPI_dataset.csv")
+    dataset.to_csv(f"{output_folder}/{geneList}_PPI_dataset.csv")
 
 if __name__ == "__main__":
     main()
